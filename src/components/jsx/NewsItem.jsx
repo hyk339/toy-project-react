@@ -1,6 +1,17 @@
-function NewsItem(){
+import "../css/NewsItem.css"
+
+function NewsItem({id, content, date}){
+
     return (
-        <div>뉴스 1개 입니다.</div>
+        <div className="NewsItem">
+            
+            <div className="info_section">
+                <div className="content">
+                    {content}
+                </div>
+            </div>
+            
+        </div>
     );
 }
 

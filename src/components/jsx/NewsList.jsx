@@ -1,7 +1,8 @@
 import "../css/NewsList.css"
 import NewsItem from "./NewsItem";
 
-function NewsList (){
+function NewsList ({newsData}){
+  
     return (
         <div className="NewsList">
             <div className="menu_bar">
@@ -11,7 +12,9 @@ function NewsList (){
               </select>
             </div>
             <div className="list_wrapper">
-                <NewsItem/>
+                {newsData.map((item)=>(
+                  <NewsItem key={item.id} {...item}/>
+                ))}
             </div>
         </div>
     );

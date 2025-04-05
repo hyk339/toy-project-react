@@ -16,17 +16,17 @@ export const NewsDispatchContext = createContext();
 const mockData = [
   {
     id : 1,
-    title : "삼성전자 주주 환원을 위해 자사주 1조 규모 매입 발표",
+    content : "삼성전자 주주 환원을 위해 자사주 1조 규모 매입 발표",
     date : new Date().getTime()
   },
   {
     id : 2,
-    title : "SK하이닉스 1분기 HDM 수출 10조 돌파",
+    content : "SK하이닉스 1분기 HDM 수출 10조 돌파",
     date : new Date().getTime()
   },
   {
     id : 3,
-    title : "하이브 완전체 활동 주가 방향 긍정적",
+    content : "하이브 완전체 활동 주가 방향 긍정적",
     date : new Date().getTime()
   },
 ]
@@ -34,13 +34,13 @@ const mockData = [
 function App() {
   // dispatch : 발송하다, 급송하다 
   // -> 상태 변화가 있어야 한다는 사실을 알리는, 발송하는 함수
-  const [news, setNews] = useState(mockData);
+  const [newsData, setNews] = useState(mockData);
   
 
-  console.log(news);
+  
   return (
     
-    <NewsStateContext.Provider value={news}>
+    <NewsStateContext.Provider value={newsData}>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="*" element={<Notfound/>}/>
