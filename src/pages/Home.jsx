@@ -10,4 +10,8 @@ function Home (){
     );
 }
 
+function newsCrolling(){
+    
+}
+
 export default Home;
